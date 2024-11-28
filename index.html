@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>𝐌𝐀𝐑𝐈𝐒𝐄𝐋'𝐒 𝐇𝐔𝐁</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1em;
+      background-color: #333;
+    }
+    .toggle-btn {
+      font-size: 1.5em;
+      cursor: pointer;
+      color: orange;
+    }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #444;
+      padding: 1em;
+      transition: left 0.3s;
+    }
+    .sidebar.active {
+      left: 0;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar ul li {
+      margin: 1em 0;
+    }
+    .main-content {
+      padding: 2em;
+    }
+    .file-section {
+      margin: 2em 0;
+    }
+    .btn {
+      background-color: orange;
+      color: black;
+      padding: 0.5em 1em;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .btn:hover {
+      background-color: darkorange;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="toggle-btn" onclick="toggleSidebar()">☰</div>
+    <h1>𝐌𝐀𝐑𝐈𝐒𝐄𝐋'𝐒 𝐇𝐔𝐁</h1>
+  </header>
+
+  <div class="sidebar" id="sidebar">
+    <ul>
+      <li>Modded Apps</li>
+      <li>Premium Bug Bot Files</li>
+      <li>Bot Repositories</li>
+      <li>Deployment Sites</li>
+      <li>Football Viewing Apps</li>
+      <li>Tutorials Channel</li>
+      <li>Premium VPN Files</li>
+      <li>Termux Commands</li>
+      <li>Useful Links</li>
+    </ul>
+  </div>
+
+  <main class="main-content">
+    <section class="file-section">
+      <h2>Modded Apps</h2>
+      <input type="file" class="btn" />
+      <button class="btn">Download</button>
+    </section>
+    <!-- Repeat for other categories -->
+  </main>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
